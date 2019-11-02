@@ -1,0 +1,127 @@
+table.tablesorter thead tr .header
+{
+	/*background-image: url(../img/bg.gif);*/
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 20px;
+	/*cursor: pointer;*/
+	font-weight: bold;
+}
+table.tablesorter thead tr .headerSortUp
+{
+	background-image: url(../img/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown
+{
+	background-image: url(../img/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp
+{
+	color: #000;
+}
+
+table {
+	border: 0;
+	padding: 0;
+	margin: 0 0 20px 0;
+	border-collapse: collapse;
+	margin-top: 5px;
+}
+
+th {
+	padding: 5px; /* NOTE: th padding must be set explicitly in order to support IE */
+	text-align: left;
+	text-transform: uppercase;
+	/*line-height: 2em;  Cabecera de la tabla*/ 
+	color: #FFF;
+	background-color: #555;
+}
+
+tbody td {
+	padding: 5px 5px 20px 5px;
+	line-height: 18px;
+	border-top: 1px solid #E0E0E0;
+}
+
+tbody tr:nth-child(2n) {
+	background-color: #F7F7F7;
+	opacity: 0.8;
+}
+
+tbody tr:hover {
+	background-color: #EEEEEE;
+}
+
+.amount {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.stock th {
+	background-color: rgb(97, 94, 92);	
+	text-align: center;
+	padding: 10px;
+}
+
+.stock th, .stock td {
+	text-align: center;
+	padding: 4px 10px;
+	padding: 2px;
+}
+
+.stock td:first-child, .stock th:first-child {
+	text-align: left;
+	font-weight: normal;
+}
+
+body.fixed-header,
+body.scrollable-block {
+	padding: 70px 20px;
+}
+
+body.scrollable-block {
+	min-width: 1000px;
+}
+
+body.fixed-header .header,
+body.scrollable-block .header {
+	position: fixed;
+	top: 0;
+	color: #FFC234;
+	width: 100%;
+	z-index: 1000;
+	margin: 0 -20px;
+	padding: 0 20px;
+	border-bottom: 10px solid red;
+}
+
+body.fixed-header .header {
+	background: #080808;
+}
+
+body.scrollable-block .header {
+	background: #606;
+}
+
+body.scrollable-block table {
+	width: 90%;
+}
+
+.scrollable-area {
+	margin: 5em auto 0 auto;
+	width: 800px;
+	height: 30em;
+	border: 2px solid #FFC234;
+	padding: 0 20px 20px 20px;
+	overflow: auto;
+	-webkit-box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.9);
+	-moz-box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.9);
+	box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.9);
+}
+
+.tableFloatingHeaderOriginal{
+	top: 76px;
+}
+#tabla_dastos td:nth-child(1) {
+    min-width: 200px;
+}
