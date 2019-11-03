@@ -1,7 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION['datos_guardados'][$_GET['cual']]['titulo']);
-echo $_GET['cual'];
 ?>
 <!DOCTYPE html> 
 <html lang="es" class="html_main">
@@ -10,25 +8,13 @@ echo $_GET['cual'];
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
     <meta charset="utf-8">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-<!--   <link href="css/custom.css" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="js/bootstrap.min.css"> 
 	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="stylesheet" href="css/animate.css">
   <script src="js/jquery-1.12.3.min.js"></script> 
    <script src="js/bootstrap.min.js"></script>
    <style>
-   </style>
-   <script>
-$(document).ready(function(){		
-	$('#titulo').val(<?php echo $_SESSION['datos_guardados'][$_GET['cual']]['titulo'];?>);
-	$('#titulo').text(<?php echo $_SESSION['datos_guardados'][$_GET['cual']]['titulo'];?>);
-	$('#descripcion').val(<?php echo $_SESSION['datos_guardados']['gente']['descripcion'];?>);
-	$('#fuente').val(<?php echo $_SESSION['datos_guardados']['exposito']['fuente'];?>);
-	$('#periodico').val(<?php echo $_SESSION['datos_guardados']['disponible']['periodico'];?>);	
-	document.getElementById("descripcion").value = "Fifth Avenue, New York City";
-});	
-</script>
+   </style>  
 </head>
 <body>
 
@@ -53,7 +39,7 @@ $(document).ready(function(){
 	  <tr><td>Periódico:</td><td>
 	  <input type="text" name="periodico" id="periodico" value="<?php echo $_SESSION['datos_guardados'][$_GET['cual']]['periodico'];?>" required></td></tr><br>
   </div>
- <tr><td></td><td><button type="submit" class="btn btn-primary entrar">Crear anuncio</button><input type="text" name="editar" id="editar" value="<?php echo $_GET['cual'];?>" hidden></td></tr></table> 
+ <tr><td></td><td><button type="submit" class="btn btn-primary entrar">Guardar anuncio</button><input type="text" name="editar" id="editar" value="<?php echo $_GET['cual'];?>" hidden></td></tr></table> 
 </form>
 </div>
 </div>

@@ -8,11 +8,6 @@ function convertir_array_acentos($array){
 
 require 'simple_html_dom.php';
 
-
-// Create DOM from URL or file
-//$pais = file_get_html('http://www.elpais.com/');
-//$mundo = file_get_html('https://www.elmundo.es/');
-
 $titulo[] = array();
 $descripcion[] = array();
 $imagen[] = array();

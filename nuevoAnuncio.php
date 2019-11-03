@@ -10,13 +10,12 @@ session_start();
     <meta charset="utf-8">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-<!--   <link href="css/custom.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="js/bootstrap.min.css"> 
 	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="stylesheet" href="css/animate.css">
   <script src="js/jquery-1.12.3.min.js"></script> 
    <script src="js/bootstrap.min.js"></script>
    <style>
+   
    </style>
 </head>
 <script>
@@ -43,7 +42,7 @@ $(document).ready(function(){
     <div class="col-xs-3 col-sm-3 col-md-3">  
 	
 		<form action="menu.php" method="post" class="formu_main">
-		<table class="tablaAcciones"><tr><td>Titulo:</td><td><input type="text" name="titulo" id="titulo" required></td></tr>
+		<table class="tablaAcciones"><tr><td>Título:</td><td><input type="text" name="titulo" id="titulo" required></td></tr>
 	</div>
   <div class="col-xs-3 col-sm-3 col-md-3">
 	  <tr><td>Descripción:</td><td>

@@ -43,8 +43,14 @@ $(document).ready(function(){
 			if($(this).attr('id') == 'editar'){
 				window.location.href='editar.php?cual='+boton;
 			}else{
-				window.location.href='borrar.php?cual='+boton;
+				var r = confirm("¿Seguro que quieres borrar el registro?");
+					if (r == true) {
+						window.location.href='borrar.php?cual='+boton;
+					}
 			}			
+		});
+		$("#sesion").click(function(){				
+				location.reload();
 		});
 });
 </script>
@@ -94,7 +100,7 @@ $(document).ready(function(){
 					<a class="btn btn-info btn-lg" id="nuevo">
           <span class="glyphicon glyphicon-plus"></span> Nuevo anuncio</a>
 					<?php if (isset($_SESSION['datos_guardados'])){
-							$ht = '<table id="propio" style="width:auto;"><tr><td><h3>Titulo</h3></td><td><h3>Descripcion</h3></td><td><h3>Fuente</h3></td><td><h3>Periodico<h3></td><td></td></tr>';											
+							$ht = '<table id="propio" style="width:auto;"><tr><td><h3>Titulo</h3></td><td><h3>Descripcion</h3></td><td><h3>Fuente</h3></td><td><h3>Periodico<h3></td><td><h3>Acciones</h3></td></tr>';											
 							for($i=0;$i<count($_SESSION['datos_guardados']);$i++){ 			
 								$ht .= '<tr id="'.$i.'"><td>'.$_SESSION['datos_guardados'][$i]['titulo'].'</td><td>'.$_SESSION['datos_guardados'][$i]['descripcion'].'</td><td>'.$_SESSION['datos_guardados'][$i]['fuente'].'</td><td>'.$_SESSION['datos_guardados'][$i]['periodico'].'</td><td><a class="btn btn-warning btn-lg" id="editar" ><span class="glyphicon glyphicon-pencil"></span>Editar</a><a class="btn btn-danger btn-lg" id="borrar"><span class="glyphicon glyphicon-remove"></span>Eliminar</a></td></tr>';			
 							}
@@ -103,7 +109,7 @@ $(document).ready(function(){
 						}	
 					?>	
 				</div>				
-			</div>
+			</div>			
 		</fieldset>
 	</div>  
 </div>  
